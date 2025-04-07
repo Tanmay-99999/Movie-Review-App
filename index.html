@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="lobster-regular">Online Movie Review Platform</h1>
+    </header>
+
+    <main>
+        <section id="movie-list">
+            <h2>Featured Movies</h2>
+            <div class="movies">
+                <div class="movie" data-title="Inception">
+                    <img src="images/inception.jpg" alt="Inception">
+                    <h3>Inception</h3>
+                    <button onclick="openReviewModal('Inception')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Interstellar">
+                    <img src="images/interstellar.jpg" alt="Interstellar">
+                    <h3>Interstellar</h3>
+                    <button onclick="openReviewModal('Interstellar')">Review</button>
+                </div>
+
+                <div class="movie" data-title="The Dark Knight">
+                    <img src="images/dark-knight.jpg" alt="The Dark Knight">
+                    <h3>The Dark Knight</h3>
+                    <button onclick="openReviewModal('The Dark Knight')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Avengers">
+                    <img src="images/avengers.jpg" alt="Avengers">
+                    <h3>Avengers</h3>
+                    <button onclick="openReviewModal('Avengers')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Titanic">
+                    <img src="images/titanic.jpg" alt="Titanic">
+                    <h3>Titanic</h3>
+                    <button onclick="openReviewModal('Titanic')">Review</button>
+                </div>
+
+                <div class="movie" data-title="The Matrix">
+                    <img src="images/matrix.jpg" alt="The Matrix">
+                    <h3>The Matrix</h3>
+                    <button onclick="openReviewModal('The Matrix')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Joker">
+                    <img src="images/joker.jpg" alt="Joker">
+                    <h3>Joker</h3>
+                    <button onclick="openReviewModal('Joker')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Avatar">
+                    <img src="images/avatar.jpg" alt="Avatar">
+                    <h3>Avatar</h3>
+                    <button onclick="openReviewModal('Avatar')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Spider-Man: No Way Home">
+                    <img src="images/spiderman.jpg" alt="Spider-Man">
+                    <h3>Spider-Man: No Way Home</h3>
+                    <button onclick="openReviewModal('Spider-Man: No Way Home')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Black Panther">
+                    <img src="images/blackpanther.jpg" alt="Black Panther">
+                    <h3>Black Panther</h3>
+                    <button onclick="openReviewModal('Black Panther')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Shutter Island">
+                    <img src="images/shutter-island.jpg" alt="Shutter Island">
+                    <h3>Shutter Island</h3>
+                    <button onclick="openReviewModal('Shutter Island')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Gladiator">
+                    <img src="images/gladiator.jpg" alt="Gladiator">
+                    <h3>Gladiator</h3>
+                    <button onclick="openReviewModal('Gladiator')">Review</button>
+                </div>
+
+                <div class="movie" data-title="The Godfather">
+                    <img src="images/godfather.jpg" alt="The Godfather">
+                    <h3>The Godfather</h3>
+                    <button onclick="openReviewModal('The Godfather')">Review</button>
+                </div>
+
+                <div class="movie" data-title="Django Unchained">
+                    <img src="images/django.jpg" alt="Django Unchained">
+                    <h3>Django Unchained</h3>
+                    <button onclick="openReviewModal('Django Unchained')">Review</button>
+                </div>
+
+                <div class="movie" data-title="The Wolf of Wall Street">
+                    <img src="images/wolf-of-wall-street.jpg" alt="The Wolf of Wall Street">
+                    <h3>The Wolf of Wall Street</h3>
+                    <button onclick="openReviewModal('The Wolf of Wall Street')">Review</button>
+                </div>
+
+                <!-- Add 16 more movies following the same pattern -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Review Modal -->
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeReviewModal()">&times;</span>
+            <h2 id="movie-title"></h2>
+            <textarea id="review-text" placeholder="Write your review..."></textarea>
+            <input type="number" id="review-rating" min="1" max="5" placeholder="Rating (1-5)">
+            <button onclick="submitReview()">Submit Review</button>
+            <div id="reviews-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
